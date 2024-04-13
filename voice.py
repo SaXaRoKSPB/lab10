@@ -1,5 +1,5 @@
 from vosk_tts import Model, Synth
-from playsound import playsound
+import winsound
 
 
 class Voice:
@@ -8,12 +8,15 @@ class Voice:
         self.synth = Synth(model)
         self.speaker = 2
 
-    def text_to_speech(self, text):
+    def play(self, wav_name):
+        winsound.PlaySound(wav_name, winsound.SND_FILENAME)
+
+    def text_to_speech(self, text='привет'):
         self.synth.synth(text,
                          'out.wav',
                          speaker_id=self.speaker
                          )
-        playsound('out.wav', False)
+        self.play('out.wav')
 
     def set_voice(self, speaker):
         self.speaker = speaker

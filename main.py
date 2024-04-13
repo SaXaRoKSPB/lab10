@@ -1,5 +1,4 @@
 import time
-
 from recognition import Recognizer
 from voice import voice
 from commands import Command
@@ -7,7 +6,7 @@ from commands import Command
 
 rec = Recognizer()
 rec.stream.stop_stream()
-voice.text_to_speech('Привет! Я голосовой ассистент')
+voice.text_to_speech('Привет, Я голосовой ассистент, Юля')
 time.sleep(0.5)
 rec.stream.start_stream()
 text_gen = rec.listen()

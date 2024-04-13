@@ -1,11 +1,13 @@
-from handlers import thanks, relax
+from handlers import hello, anecdot, video, work, bye
 from voice import voice
 
 
 COMMANDS = [
-    {'id': 0, 'text': 'спасибо', 'handler': thanks},
-    {'id': 1, 'text': 'отдых', 'handler': relax},
-    {'id': 2, 'text': '', 'handler': ''}
+    {'id': 0, 'text': 'привет', 'handler': hello},
+    {'id': 1, 'text': 'анекдот', 'handler': anecdot},
+    {'id': 2, 'text': 'видео', 'handler': video},
+    {'id': 3, 'text': 'работаем', 'handler': work},
+    {'id': 4, 'text': 'пока', 'handler': bye}
 ]
 
 ACTIVATION = 'юля'
